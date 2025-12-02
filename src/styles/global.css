@@ -1,0 +1,121 @@
+/* Cubano (regular) */
+@font-face {
+  font-family: "Cubano";
+  src: url("/fonts/cubano.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Sofia Pro Regular */
+@font-face {
+  font-family: "SofiaPro";
+  src: url("/fonts/sofia_pro_regular Az.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Sofia Pro Bold */
+@font-face {
+  font-family: "SofiaPro";
+  src: url("/fonts/sofia_pro_bold Az.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* --------------------------
+   DESIGN TOKENS (variabler)
+--------------------------- */
+html {
+  /* FONT FAMILIES */
+  --ff-headlines: "Cubano", sans-serif;
+  --ff-main: "SofiaPro", sans-serif;
+
+  /* FONT SIZES - DESKTOP STØRRELSER */
+  --fs-body: 16px;
+  --fs-l: 6rem; /* Headline 1 - desktop */
+  --fs-m: 1.95rem; /* Headline 2 - desktop */
+  --fs-s: 1rem; /* Body text - desktop */
+
+  /* FONT SIZES - MOBIL STØRRELSER */
+  --mfs-l: 1.2rem; /* Headline 1 - mobil */
+  --mfs-m: 1rem; /* Body text - mobil */
+
+  /* FARVER */
+  --primaer-clr: #214082; /* mørk blå */
+  --sekundaer-clr: #debddb; /* lavender */
+  --tridaer-clr: #badeb9; /* light green */
+  --text-clr: #192952; /* tekstfarve */
+  --box-lilla-clr: #f5ebf4;
+  --box-grey-clr: #f4f5f9;
+
+  /* AFSTANDE  */
+  --space-heading-body: 1.5rem; /* 24px mellem H2 og body tekst */
+
+  /* LINE HEIGHT TIL BODY */
+  --lh-body: 1.5625; /* 25px på 16px base */
+}
+
+/* --------------------------
+   BASE STYLES
+--------------------------- */
+
+body {
+  margin: 0;
+  font-family: var(--ff-main);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body); /* kun på body-tekst */
+  color: var(--text-clr);
+  background: #fff;
+}
+
+/* Overskrifter */
+h1,
+h2,
+h3 {
+  font-family: var(--ff-headlines);
+  color: var(--text-clr);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: var(--fs-l);
+}
+h2 {
+  font-size: var(--fs-m);
+  margin-bottom: var(--space-heading-body); /* 24px til næste element */
+}
+p {
+  font-size: var(--fs-s);
+  margin: 0 0 1rem 0;
+}
+
+/* Mobil-typografi */
+@media (max-width: 768px) {
+  body {
+    font-size: var(--mfs-m);
+  }
+  h1 {
+    font-size: var(--mfs-l);
+  }
+}
+
+/* SIDEBAR NAVIGATION STYLING */
+aside nav a {
+  color: var(--text-clr);
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+
+/* Hover Effekt */
+aside nav a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Active State (den side du står på) */
+aside nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}

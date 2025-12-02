@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Logo";
+const currentPage = "logo";
+---
+
+<Layout {title} {currentPage}>
+    <PageHeader pageNumber="04" heading="Logo" />
+     <PageContainer>
+   <SectionIntro
+    text="The Mikkeller Running Club logo is a key part of our visual identity. It unites chapters across the world while allowing room for local expression. By using approved logos and consistent guidelines, we ensure that every chapter feels uniquely theirs — yet unmistakably MRC."
+  />
+</PageContainer>
+    
+</Layout>

@@ -1,0 +1,162 @@
+---
+/* Global footer component */
+---
+
+<footer
+  class="mrc-footer"
+  style="
+    width: 100%;
+    max-width: 2500px;          /* matcher Figma-bredden */
+    height: 278px;              /* matcher Figma-højden */
+    background: #214082;        /* MRC blå */
+    color: #ffffff;
+    box-sizing: border-box;
+    margin-top: 4rem;
+    margin-left: 0;
+    padding: 2.5rem 3rem;
+    font-family: var(--ff-main);
+    display: flex;
+    align-items: flex-end;      /* alt ned i bunden af boksen */
+  "
+>
+  <div
+    style="
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between; /* venstre / midt / højre */
+      align-items: flex-end;
+      gap: 2rem;
+    "
+  >
+    <!-- VENSTRE: MIKKELLER -->
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      "
+    >
+      <p
+        style="
+          font-family: var(--ff-headlines);
+          font-size: 1.6rem;
+          margin: 0;
+        "
+      >
+        MIKKELLER
+      </p>
+      <p
+        style="
+          margin: 0;
+          font-size: 0.85rem;
+        "
+      >
+        © 2025
+      </p>
+    </div>
+
+    <!-- MIDTEN: DOWNLOAD-TEKST + KNAPPER -->
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+      "
+    >
+      <p
+        style="
+          margin: 0;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          line-height: 1.4;
+        "
+      >
+        DOWNLOAD OUR APP<br />
+        STAY CONNECTED WITH MRC
+      </p>
+
+      <div
+        style="
+          display: flex;
+          gap: 0.75rem;
+        "
+      >
+        <img
+          src="/img/windows-download-button.svg"
+          alt="Download on Windows"
+          style="height: 40px; width: auto; display: block;"
+        />
+        <img
+          src="/img/store-downloade-button.svg"
+          alt="Download on App Stores"
+          style="height: 40px; width: auto; display: block;"
+        />
+      </div>
+    </div>
+
+    <!-- HØJRE: SEND REQUEST + SOCIAL IKONER -->
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        text-align: right;
+      "
+    >
+      <!-- SEND REQUEST knap -->
+      <button
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.6rem 1.6rem;
+          border: 1px solid #ffffff;
+          border-radius: 999px;
+          background: transparent;
+          color: #ffffff;
+          font-family: var(--ff-main);
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          cursor: pointer;
+        "
+      >
+        <span>SEND REQUEST</span>
+        <img
+          src="/img/mail.svg"
+          alt=""
+          style="height: 16px; width: auto;"
+        />
+      </button>
+
+      <!-- Sociale ikoner -->
+      <div
+        style="
+          display: flex;
+          gap: 0.75rem;
+        "
+      >
+        <img
+          src="/img/insta.svg"
+          alt="Instagram"
+          style="height: 22px; width: auto; display: block;"
+        />
+        <img
+          src="/img/face.svg"
+          alt="Facebook"
+          style="height: 22px; width: auto; display: block;"
+        />
+        <img
+          src="/img/mail.svg"
+          alt="Email"
+          style="height: 22px; width: auto; display: block;"
+        />
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Merch";
+const currentPage = "merch";
+---
+
+<Layout {title} {currentPage}>
+   <PageHeader pageNumber="09" heading="Merch" />
+    <PageContainer>
+   <SectionIntro
+    text="At Mikkeller Running Club, we love when our runners show their MRC spirit by representing us in their merch. To keep a consistent and recognizable identity across all global chapters, it’s important that everyone follows our shared merch guidelines."
+  />
+</PageContainer>
+</Layout>

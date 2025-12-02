@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Graphics";
+const currentPage = "graphics";
+---
+
+<Layout {title} {currentPage}>
+  <PageHeader pageNumber="05" heading="Graphics" />
+  <PageContainer>
+   <SectionIntro
+    text="graphics ensure clarity, recognition, and a sense of belonging, making it easy for our global MRC community to understand information and feel connected."
+  />
+</PageContainer>
+
+</Layout>

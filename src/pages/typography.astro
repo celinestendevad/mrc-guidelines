@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Typography";
+const currentPage = "typography";
+---
+
+<Layout {title} {currentPage}>
+    <PageHeader pageNumber="06" heading="Typography" />
+    <PageContainer>
+   <SectionIntro
+    text="Typography helps shape the voice of Mikkeller Running Club. By using Cubano for headlines and Sofia Pro for body text, we create a clear, consistent, and recognizable expression across all chapters."
+  />
+</PageContainer>
+</Layout>

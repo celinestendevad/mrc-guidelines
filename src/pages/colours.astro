@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Colours";
+const currentPage = "colours";
+---
+
+<Layout {title} {currentPage}>
+   <PageHeader pageNumber="07" heading="colours" />
+  <PageContainer>
+   <SectionIntro
+    text="Colors is a vital part of the Mikkeller identity, shaping how our brand and community come to life. Through our palette, we create consistency, express our playful energy, and ensure that every chapter feels distinctly MRC. Each color is carefully selected to represent who we are."
+  />
+</PageContainer>
+  
+
+
+</Layout>

@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Brand Story";
+const currentPage = "brand-story";
+---
+
+<Layout {title} {currentPage}>
+
+  <PageHeader pageNumber="02" heading="Brand\nStory" />
+    <PageContainer>
+   <SectionIntro
+    text="Mikkeller Running Club is an international social running club bringing together runners who love great beer, camaraderie, and adventure. We run and afterwards, we drink beer. Everyone is welcome, whether you're a beginner or experienced, and whether you prefer beer or a non-alcoholic option."
+  />
+</PageContainer>
+
+ 
+</Layout>

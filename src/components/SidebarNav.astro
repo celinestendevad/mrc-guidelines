@@ -1,0 +1,81 @@
+---
+const { currentPage = "" } = Astro.props;
+---
+
+<aside
+  style="
+    width: 271px;
+    min-width: 271px;
+    background: #FFF;
+    border-right: 1px solid var(--primaer-clr);
+    padding: 2rem 1rem;
+    padding-right: 0%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    font-family: var(--ff-main);
+    display: flex;
+    flex-direction: column;
+  "
+>
+
+  <!-- LOGO ØVERST -->
+  <div style="text-align: center; margin-bottom: 0.6rem;">
+    <img
+      src='/img/logo.svg'
+      alt='Mikkeller Running Club logo'
+      style='width: 65px; height: auto; margin: 0 auto;'
+    />
+
+    <!-- DIVIDER UNDER LOGO -->
+    <div
+      style="
+        width: 100%;
+        height: 1px;
+        background: var(--primaer-clr);
+        margin-top: 1.5rem;
+      "
+    ></div>
+  </div>
+
+  <!-- NAVIGATION (Figma-style) -->
+  <nav
+    style="
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      font-family: var(--ff-main);
+      font-size: 1rem;
+      padding-left: 0.25rem;
+    "
+  >
+    <a href="/" class={currentPage === "index" ? "active" : ""}>01 Brand Guidelines</a>
+    <a href="/brand-story" class={currentPage === "brand-story" ? "active" : ""}>02 Brand story</a>
+    <a href="/become-captain" class={currentPage === "become-captain" ? "active" : ""}>03 Become a captain</a>
+    <a href="/logo" class={currentPage === "logo" ? "active" : ""}>04 Logo</a>
+    <a href="/graphics" class={currentPage === "graphics" ? "active" : ""}>05 Graphics</a>
+    <a href="/typography" class={currentPage === "typography" ? "active" : ""}>06 Typography</a>
+    <a href="/colours" class={currentPage === "colours" ? "active" : ""}>07 Colours</a>
+    <a href="/social-media" class={currentPage === "social-media" ? "active" : ""}>08 Social media</a>
+    <a href="/merch" class={currentPage === "merch" ? "active" : ""}>09 Merch</a>
+    <a href="/photography" class={currentPage === "photography" ? "active" : ""}>10 Photography</a>
+    <a href="/events" class={currentPage === "events" ? "active" : ""}>11 Events</a>
+    <a href="/communication" class={currentPage === "communication" ? "active" : ""}>12 Communication</a>
+  </nav>
+
+  <!-- FOOTER TEKST -->
+  <p
+    style="
+      margin-top: 4rem;
+      font-size: 0.7rem;
+      color: var(--text-clr);
+      opacity: 0.8;
+      text-align: center;
+       margin-bottom: 1rem;
+
+    "
+  >
+    UPDATED DECEMBER 01, 2025
+  </p>
+
+</aside>

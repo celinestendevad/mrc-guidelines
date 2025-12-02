@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import PageContainer from "../components/PageContainer.astro";
+
+const title = "Social Media";
+const currentPage = "social-media";
+---
+
+<Layout {title} {currentPage}>
+  <PageHeader pageNumber="08" heading="Social\nMedia" />
+   <PageContainer>
+   <SectionIntro
+    text="Social media helps us share the spirit of MRC with the world. To keep our community consistent and recognisable, please follow these simple guidelines when you post."
+  />
+</PageContainer>
+</Layout>

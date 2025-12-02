@@ -1,0 +1,24 @@
+
+---
+const { children } = Astro.props;
+---
+
+<style>
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+</style>
+
+<div class="container">
+  <slot />
+</div>
