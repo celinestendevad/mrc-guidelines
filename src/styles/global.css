@@ -90,6 +90,12 @@ p {
   text-align: justify;
 }
 
+ .bold-text {
+
+  font-weight: 700;
+  font-style: normal;
+  }
+
 /* Mobil-typografi */
 @media (max-width: 768px) {
   body {
@@ -152,3 +158,6 @@ aside nav a.active {
     margin: 0;
   }
 
+
+
+ 
