@@ -14,6 +14,87 @@ const currentPage = "logo";
    <SectionIntro
     text="The Mikkeller Running Club logo is a key part of our visual identity. It unites chapters across the world while allowing room for local expression. By using approved logos and consistent guidelines, we ensure that every chapter feels uniquely theirs — yet unmistakably MRC."
   />
+
+
+    
+    <div class="grid-header">
+      <div>
+        <div class="section">
+        <h2>Creating Your Chapter Logo</h2>
+        <p>
+          When you start a new chapter, you're welcome to design your own local version of the MRC logo. A local logo gives your chapter its own identity while staying connected to the global MRC community.
+        </p>
+        </div>
+
+        <div class="section">
+        <h2>Approval Required</h2>
+        <p>All logos used in communication must be approved by MRC. Once your logo is ready, send it to mrc@mikkeller.dk for approval.</p>
+        </div>
+        <div class="section">
+        <h2>If You Don’t Have a Designer</h2>
+        <p>No designer? No problem. You can always use the official MRC logo until you have your own approved version</p>
+        </div>
+        <div class="section">
+        <h2>Approved Materials</h2>
+        <p>  MRC provides additional visual assets you may use, including:</p>
+        
+        
+        <p class="bold">Stickers <br>Flags <br>Pavilions <br>Official graphics</p>
+        
+        <p>You can find them here <strong>(insert link)</strong>.</p>
+      </div>
+
+      <div class="section">
+      <h2>What You Can’t Do</h2>
+      <p>It is not allowed to create or use graphics that haven’t been approved by MRC. If you have a specific idea or request, reach out — we’re happy to help and let you know what’s possible.</p>
+      </div>
+
+
+      </div>
+      <div>
+      
+      <div style="text-align: center;">
+        <img src="/img/logo_big.png" alt="MRC Logo Example" class="rotating" style="max-width: 90%; height: auto; margin-bottom: 1rem; margin-left: 4rem; margin-right: 4rem; margin-top: 4rem;" />
+    
+      </div>
+   
+<div >
+    <h2 class="space">Examples from other chapters</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 3rem;">
+      <img src="/img/logo-karlskrona.png" alt="Karlskrona MRC Logo" style="width: 100%; height: auto;" />
+      <img src="/img/logo-london.png" alt="London MRC Logo" style="width: 100%; height: auto;" />
+      <img src="/img/logo-malmo.png" alt="Malmö MRC Logo" style="width: 100%; height: auto;" />
+      <img src="/img/logo-thorshavn.png" alt="Thorshavn MRC Logo" style="width: 100%; height: auto;" />
+    </div>
+    </div>
+  </div>
+ </div>
+
+
+
 </PageContainer>
     
 </Layout>
+
+<style>
+  .space {
+    margin-top: 4rem;
+  }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: spin 6s linear infinite;
+  transform-origin: center center;
+  display: block; /* sikrer rotation fungerer korrekt */
+}
+</style>
+

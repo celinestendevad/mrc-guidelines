@@ -52,6 +52,12 @@ html {
   --space-heading-body: 1.5rem; /* 24px mellem H2 og body tekst */
   /* LINE HEIGHT TIL BODY */
   --lh-body: 1.5625; /* 25px på 16px base */
+  /* SPACE MELLEM SEKTIONER  */
+  --space-section: 3rem;
+}
+
+.section {
+  margin-bottom: var(--space-section); /* afstand til næste sektion */
 }
 
 /* --------------------------
@@ -88,6 +94,7 @@ p {
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
+  max-width: 400px;
 }
 
  .bold-text {
@@ -131,7 +138,6 @@ aside nav a.active {
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
 }
 
 .pink_box {
@@ -144,20 +150,26 @@ aside nav a.active {
   text-align: justify;
 }
 
-  /* Titel + tekst skal stå i to kolonner */
+/* Titel + tekst skal stå i to kolonner */
 
-  .grid-header {
+.grid-header {
   display: grid;
   grid-template-columns: auto minmax(260px, 420px); /* H2 venstre – tekst højre */
   column-gap: 3rem;
   margin: 3rem 0 2rem;
   align-items: flex-start;
-  }
+}
 
-  .grid-header h2 {
-    margin: 0;
-  }
+.grid-header h2 {
+  margin: 0;
+  margin-bottom: var(--space-heading-body); /* 24px til næste element */
+  max-width: 400px;
+}
 
-
-
- 
+.grid-header p {
+  max-width: 400px;
+  font-size: var(--fs-s);
+  margin: 0 0 1rem 0;
+  line-height: 30px;
+  text-align: justify;
+}
