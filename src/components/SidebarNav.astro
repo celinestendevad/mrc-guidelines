@@ -8,7 +8,7 @@ const { currentPage = "" } = Astro.props;
     min-width: 271px;
     background: #FFF;
     border-right: 1px solid var(--primaer-clr);
-    padding: 2rem 1rem;
+   
     padding-right: 0%;
     position: sticky;
     top: 0;
@@ -16,15 +16,18 @@ const { currentPage = "" } = Astro.props;
     font-family: var(--ff-main);
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
   "
 >
 
   <!-- LOGO ØVERST -->
-  <div style="text-align: center; margin-bottom: 0.6rem;">
+  <div style="text-align: center; margin-bottom: 0rem;">
+    
     <img
       src='/img/logo.svg'
       alt='Mikkeller Running Club logo'
       style='width: 65px; height: auto; margin: 0 auto;'
+      
     />
 
     <!-- DIVIDER UNDER LOGO -->
@@ -34,11 +37,13 @@ const { currentPage = "" } = Astro.props;
         height: 1px;
         background: var(--primaer-clr);
         margin-top: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
       "
     ></div>
   </div>
 
-  <!-- NAVIGATION (Figma-style) -->
+  <!-- NAVIGATION LINKS -->
   <nav
     style="
       display: flex;
@@ -47,6 +52,7 @@ const { currentPage = "" } = Astro.props;
       font-family: var(--ff-main);
       font-size: 1rem;
       padding-left: 0.25rem;
+       padding: 2rem 2rem;
     "
   >
     <a href="/" class={currentPage === "index" ? "active" : ""}>01 Brand Guidelines</a>
@@ -55,7 +61,7 @@ const { currentPage = "" } = Astro.props;
     <a href="/logo" class={currentPage === "logo" ? "active" : ""}>04 Logo</a>
     <a href="/graphics" class={currentPage === "graphics" ? "active" : ""}>05 Graphics</a>
     <a href="/typography" class={currentPage === "typography" ? "active" : ""}>06 Typography</a>
-    <a href="/colours" class={currentPage === "colours" ? "active" : ""}>07 Colours</a>
+    <a href="/colors" class={currentPage === "colours" ? "active" : ""}>07 Colours</a>
     <a href="/social-media" class={currentPage === "social-media" ? "active" : ""}>08 Social media</a>
     <a href="/merch" class={currentPage === "merch" ? "active" : ""}>09 Merch</a>
     <a href="/photography" class={currentPage === "photography" ? "active" : ""}>10 Photography</a>
@@ -66,7 +72,7 @@ const { currentPage = "" } = Astro.props;
   <!-- FOOTER TEKST -->
   <p
     style="
-      margin-top: 4rem;
+      margin-top: 1.5rem;
       font-size: 0.7rem;
       color: var(--text-clr);
       opacity: 0.8;

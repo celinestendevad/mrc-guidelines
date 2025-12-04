@@ -50,7 +50,6 @@ html {
 
   /* AFSTANDE  */
   --space-heading-body: 1.5rem; /* 24px mellem H2 og body tekst */
-
   /* LINE HEIGHT TIL BODY */
   --lh-body: 1.5625; /* 25px på 16px base */
 }
@@ -74,7 +73,7 @@ h2,
 h3 {
   font-family: var(--ff-headlines);
   color: var(--text-clr);
-  margin-top: 0;
+  margin-top: 96px;
 }
 
 h1 {
@@ -87,6 +86,8 @@ h2 {
 p {
   font-size: var(--fs-s);
   margin: 0 0 1rem 0;
+  line-height: 30px;
+  text-align: justify;
 }
 
 /* Mobil-typografi */
@@ -118,4 +119,21 @@ aside nav a:hover {
 aside nav a.active {
   font-weight: 700;
   text-decoration: underline;
+}
+
+/* GRIDS */
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.pink_box {
+  background-color: var(--box-lilla-clr);
+}
+.pink_box p {
+  font-size: var(--fs-s);
+  margin: 0 0 1rem 0;
+  line-height: 30px;
+  text-align: justify;
 }
