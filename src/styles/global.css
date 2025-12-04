@@ -138,87 +138,17 @@ aside nav a.active {
   text-align: justify;
 }
 
-  /* COLOURS */
-
   /* Titel + tekst skal stå i to kolonner */
-  .colours-header {
-    display: grid;
-    grid-template-columns: auto minmax(260px, 420px);
-    column-gap: 3rem;
-    margin: 3rem 0 2rem;
-    align-items: flex-start;
-  }
 
-  .colours-title {
-    margin: 0;
-    text-transform: uppercase;
-
-    font-size: 2rem;
-  }
-
-  .colours-text {
-    margin: 0;
-    line-height: 1.5;
-  }
-/* COLOURS GRID */
-.colour-grid {
+  .grid-header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-/* Selve kortet */
-.colour-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* som gap 130px i Figma */
+  grid-template-columns: auto minmax(260px, 420px); /* H2 venstre – tekst højre */
+  column-gap: 3rem;
+  margin: 3rem 0 2rem;
   align-items: flex-start;
-
-  padding: 29px 108px 27px 15px; /* fra Figma */
-  border-radius: 7px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-  font-family: var(--ff-main);
-  color: #ffffff;
-  min-height: 260px; /* så de får “kort”-form */
-}
-
-/* Label øverst (PRIMARY, SECONDARY, TERTIARY) */
-.colour-card__label {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-/* Teksten nederst */
-.colour-card__body {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  font-style: italic;
-}
-
-/* Farverne på de tre kort */
-.colour-card--primary {
-  background: #214082;
-}
-
-.colour-card--secondary {
-  background: #d6b3d5;
-}
-
-.colour-card--tertiary {
-  background: #badeb9;
-}
-
-/* Mobil */
-@media (max-width: 700px) {
-  .colour-grid {
-    grid-template-columns: 1fr;
   }
 
-  .colour-card {
-    padding-right: 40px; /* lidt smallere på mobil */
+  .grid-header h2 {
+    margin: 0;
   }
-}
+

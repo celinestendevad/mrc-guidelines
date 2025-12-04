@@ -16,10 +16,10 @@ const currentPage = "colours";
   />
 
 
-<div class="colours-header">
-  <h2 class="colours-title">Colour Palette</h2>
+<div class="grid-header">
+  <h2>Colour Palette</h2>
 
-  <p class="colours-text">
+  <p>
     Below are codes for our signature colors used for print and graphics.
     Primary colors are used for colored text and backgrounds. For example
     to compliment black/white or black/paper. Secondary and tertiary colors
@@ -61,3 +61,71 @@ const currentPage = "colours";
 
 
 </Layout>
+
+
+<style>
+
+/* COLOURS GRID */
+.colour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Selve kortet */
+.colour-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* som gap 130px i Figma */
+  align-items: flex-start;
+
+  padding: 29px 108px 27px 15px; /* fra Figma */
+  border-radius: 7px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: var(--ff-main);
+  color: #ffffff;
+  min-height: 260px; /* så de får “kort”-form */
+}
+
+/* Label øverst (PRIMARY, SECONDARY, TERTIARY) */
+.colour-card__label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Teksten nederst */
+.colour-card__body {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Farverne på de tre kort */
+.colour-card--primary {
+  background: #214082;
+}
+
+.colour-card--secondary {
+  background: #d6b3d5;
+}
+
+.colour-card--tertiary {
+  background: #badeb9;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+  .colour-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .colour-card {
+    padding-right: 40px; /* lidt smallere på mobil */
+  }
+}
+
+</style>
