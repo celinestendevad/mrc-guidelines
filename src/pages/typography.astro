@@ -14,5 +14,56 @@ const currentPage = "typography";
    <SectionIntro
     text="Typography helps shape the voice of Mikkeller Running Club. By using Cubano for headlines and Sofia Pro for body text, we create a clear, consistent, and recognizable expression across all chapters."
   />
+  <section class="typography-wrapper">
+
+  <div class="typography-grid">
+    <h2>OUR TYPOFACES</h2>
+
+    <p>
+      We use two primary typefaces in our brand communication. Cubano serves as our bold headline typeface, adding clarity and character to key messages. Sofia Pro is our functional body typeface, chosen for its readability and clean expression. Together, they ensure a consistent and professional Mikkeller identity.
+    </p>
+  </div>
+
+  <div class="image-box">
+    <img src="/img/cubano.png" alt="Typography example" />
+  </div>
+  <div class="image-box">
+    <img src="/img/sofia.png" alt="Typography example" />
+  </div>
+
+</section>
 </PageContainer>
 </Layout>
+
+
+<style>.typography-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.typography-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* venstre lille – højre større */
+  align-items: start;
+  gap: 2rem;
+}
+
+.typography-grid h2 {
+  margin: 0;
+} /* ← DENNE MANGLEDE */
+
+.typography-grid p {
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+</style>
