@@ -148,6 +148,7 @@ aside nav a.active {
 
 .pink_box {
   background-color: var(--box-lilla-clr);
+  margin-top: 0;
 }
 .pink_box p {
   font-size: var(--fs-s);
