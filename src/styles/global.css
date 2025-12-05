@@ -96,11 +96,10 @@ p {
   text-align: justify;
 }
 
- .bold-text {
-
+.bold-text {
   font-weight: 700;
   font-style: normal;
-  }
+}
 
 /* Mobil-typografi */
 @media (max-width: 768px) {
@@ -137,6 +136,14 @@ aside nav a.active {
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.two-columns p {
+  max-width: 400px;
+  font-size: var(--fs-s);
+  margin: 0 0 1rem 0;
+  line-height: 30px;
+  text-align: justify;
 }
 
 .pink_box {
