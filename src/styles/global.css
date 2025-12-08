@@ -143,11 +143,11 @@ aside nav a.active {
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
+  column-gap: 8rem;
 }
 
 .two-columns p {
-  max-width: 400px;
+  max-width: 600px;
   font-size: var(--fs-s);
   margin: 0 0 1rem 0;
   line-height: 30px;
