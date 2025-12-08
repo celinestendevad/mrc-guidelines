@@ -272,17 +272,15 @@ aside nav a.active {
    SPACING UTILITIES
 --------------------------- */
 
-.space-48 {
-  margin-bottom: 48px;
+.section {
+  margin-bottom: 48px; /* standard spacing mellem sektioner */
 }
 
-.space-96 {
+.section .top {
+  margin-top: 48px; /* standard spacing mellem sektioner */
+}
+
+/* Hvis du vil ekstra stor spacing på enkelte sektioner */
+.section.space-96 {
   margin-bottom: 96px;
-}
-
-/* Bonus: Fjern dobbelt-margin som ofte opstår */
-section:last-child,
-.space-48:last-child,
-.space-96:last-child {
-  margin-bottom: 0;
 }
