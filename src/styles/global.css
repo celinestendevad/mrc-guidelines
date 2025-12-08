@@ -56,7 +56,7 @@ html {
   --space-section: 3rem;
 
   /* NY: skal matche PageContainer side-padding */
-  --page-pad: 80px;
+  --page-pad: 100px;
 }
 
 .section {
@@ -135,7 +135,11 @@ aside nav a.active {
   text-decoration: underline;
 }
 
-/* GRIDS */
+/* --------------------------
+   LAYOUT
+--------------------------- */
+
+/* 2 KOLONNE GRID */
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -150,6 +154,78 @@ aside nav a.active {
   text-align: justify;
 }
 
+/* TITEL + TEKST SKAL STÅ I TO KOLONNERT*/
+.grid-header {
+  display: grid;
+  grid-template-columns: auto minmax(260px, 420px); /* H2 venstre – tekst højre */
+  column-gap: 3rem;
+  margin: 3rem 0 2rem;
+  align-items: flex-start;
+}
+
+.grid-header h2 {
+  margin: 0;
+  margin-bottom: var(--space-heading-body); /* 24px til næste element */
+  max-width: 400px;
+}
+
+.grid-header p {
+  max-width: 400px;
+  font-size: var(--fs-s);
+  margin: 0 0 1rem 0;
+  line-height: 30px;
+  text-align: justify;
+}
+
+/* TEKST ROW */
+
+.text-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin: 5rem 0;
+  align-items: start;
+}
+
+.text-row h2 {
+  margin: 0;
+  white-space: nowrap; /* vigtig: holder dine H2 på én linje */
+  margin-bottom: var(--space-heading-body); /* 24px til næste element */
+}
+
+.text-row p {
+  margin: 0;
+  font-size: var(--fs-s);
+  line-height: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Tablet breakpoint: kolonner får mere luft */
+@media (max-width: 1100px) {
+  .text-row {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Lille tablet / mobil: skift til én kolonne */
+@media (max-width: 750px) {
+  .text-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 4rem 0;
+  }
+
+  .text-row h2 {
+    white-space: normal; /* må gerne bryde på mobil */
+  }
+}
+
+/* --------------------------
+   PINK BOX
+--------------------------- */
+
 /* PINK BAGGRUNDSBOKS*/
 .pink_box {
   background-color: var(--box-lilla-clr);
@@ -157,12 +233,13 @@ aside nav a.active {
   /* helt op til intro */
   margin-top: 0;
 
-  /* divider-linje over boksen */
-  border-top: 1px solid rgba(25, 41, 82, 0.35);
-
   /* overrul PageContainer side-padding */
   margin-left: calc(var(--page-pad) * -1);
   margin-right: calc(var(--page-pad) * -1);
+
+  /* overrul PageContainer side-padding */
+  margin-left: -100px;
+  margin-right: -100px;
 
   /* behold indholdet alignet med resten af siden */
   padding-left: var(--page-pad);
@@ -191,25 +268,21 @@ aside nav a.active {
   max-width: 400px;
 }
 
-/* TITEL + TEKST SKAL STÅ I TO KOLONNERT*/
-.grid-header {
-  display: grid;
-  grid-template-columns: auto minmax(260px, 420px); /* H2 venstre – tekst højre */
-  column-gap: 3rem;
-  margin: 3rem 0 2rem;
-  align-items: flex-start;
+/* --------------------------
+   SPACING UTILITIES
+--------------------------- */
+
+.space-48 {
+  margin-bottom: 48px;
 }
 
-.grid-header h2 {
-  margin: 0;
-  margin-bottom: var(--space-heading-body); /* 24px til næste element */
-  max-width: 400px;
+.space-96 {
+  margin-bottom: 96px;
 }
 
-.grid-header p {
-  max-width: 400px;
-  font-size: var(--fs-s);
-  margin: 0 0 1rem 0;
-  line-height: 30px;
-  text-align: justify;
+/* Bonus: Fjern dobbelt-margin som ofte opstår */
+section:last-child,
+.space-48:last-child,
+.space-96:last-child {
+  margin-bottom: 0;
 }
