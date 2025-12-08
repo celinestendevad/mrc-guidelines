@@ -1,0 +1,164 @@
+<section class="sendrequest-strip">
+  <div class="sendrequest-inner">
+    <div class="sendrequest-content">
+      <h3 class="sendrequest-heading">
+        Please reach out if you have any ideas you’d like to share
+      </h3>
+
+      <!-- ⭐ KNAP ER NU ET A-TAG -->
+      <a href="mailto:mrc@mikkeller.com" class="sendrequest-button">
+        <span>SEND REQUEST</span>
+        <img src="/img/mail.svg" alt="" class="sendrequest-icon" />
+      </a>
+    </div>
+
+    <img
+      src="/img/member.grafik.png"
+      alt="MRC member illustration"
+      class="sendrequest-graphic"
+    />
+  </div>
+</section>
+
+<style>
+/* --------------------------
+   SEND REQUEST STRIP – DESKTOP
+--------------------------- */
+
+.sendrequest-strip {
+  background-color: var(--box-grey-clr);
+  height: 200px;
+
+  margin-left: calc(var(--page-pad) * -1);
+  padding-left: var(--page-pad);
+
+  padding-top: 72px;
+  position: relative; /* Desktop figur i bunden */
+
+
+   
+}
+
+.sendrequest-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* tekst venstrejusteret */
+.sendrequest-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sendrequest-heading {
+  color: #192952;
+  font-family: Cubano, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+/* --------------------------
+   KNAP – STYLET A-TAG
+--------------------------- */
+.sendrequest-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  padding: 10px 39px;
+  height: 30px;
+
+  font-family: "Cubano", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  background: #214082;
+  color: white;
+  text-decoration: none;
+
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sendrequest-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sendrequest-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sendrequest-icon {
+  height: 16px;
+  width: auto;
+}
+
+/* figur i højre bund på desktop */
+.sendrequest-graphic {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  height: 150px;
+  width: auto;
+}
+
+/* --------------------------
+   MOBIL VERSION – ALT UNDER HINANDEN
+--------------------------- */
+@media (max-width: 768px) {
+  .sendrequest-strip {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    height: auto;
+    position: static;
+  }
+
+  .sendrequest-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .sendrequest-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .sendrequest-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .sendrequest-button {
+    margin: 0 auto;
+  }
+
+  .sendrequest-graphic {
+    position: static;
+    height: 130px;
+    margin-top: 1rem;
+  }
+}
+</style>
+
