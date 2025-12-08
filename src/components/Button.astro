@@ -1,0 +1,61 @@
+---
+const { href = "#", label = "Klik her", className = "" } = Astro.props;
+import "../styles/global.css";
+
+---
+
+<a 
+  href={href}
+  class={`button ${className}`}
+>
+  {label}
+</a>
+
+<style>
+  .button {
+   display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Figma padding + højde */ 
+    height: 30px;
+    padding: 10px 39px;
+    margin-top: 4rem;
+
+    /* Farver */
+    background: #214082;
+    color: white;
+
+    /* Typografi */
+    font-family: "Cubano", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+
+    /* Border + radius */
+    border-radius: 8px;
+    outline: 0.8px solid #214082;
+    outline-offset: -0.8px;
+
+    /* Shadow */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Animation */
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+  }
+
+
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .button:active {
+    transform: translateY(0);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+</style>

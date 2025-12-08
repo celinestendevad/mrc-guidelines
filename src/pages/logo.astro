@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
+import Button from "../components/button.astro";
 
 const title = "Logo";
 const currentPage = "logo";
@@ -54,8 +55,13 @@ const currentPage = "logo";
       <div>
       
       <div style="text-align: center;">
-        <img src="/img/logo_big.png" alt="MRC Logo Example" class="rotating" style="max-width: 90%; height: auto; margin-bottom: 1rem; margin-left: 4rem; margin-right: 4rem; margin-top: 4rem;" />
-    
+        <img src="/img/logo_big.png" 
+class="rotating logo-image" />
+
+
+        
+ <Button href="/kontakt" label="download" />
+
       </div>
    
 <div >
@@ -78,6 +84,15 @@ const currentPage = "logo";
 </Layout>
 
 <style>
+
+
+.logo-image {
+  max-width: 90%;
+  height: auto;
+  margin: 4rem auto 1rem auto; /* top, auto center, bottom */
+  display: block; /* så auto-margin virker */
+}
+
   .space {
     margin-top: 4rem;
   }

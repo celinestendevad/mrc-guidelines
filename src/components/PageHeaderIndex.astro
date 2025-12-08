@@ -1,0 +1,82 @@
+---
+import "../styles/global.css";
+const {
+  pageNumber = "01",
+  heading = "BrandGuidelines", // TIP: brug \n til at lave to linjer
+} = Astro.props;
+---
+
+<style>
+  /* WRAPPER */
+  .page-header {
+    height: 540px;
+    width: 100%;
+    background-color: var(--sekundaer-clr);
+
+    position: relative; /* vigtig */
+    overflow: hidden;
+  }
+
+  /* CONTENT – bund-placering */
+  .page-header__inner {
+    position: absolute;
+    bottom: 48px; /* ← DEN VIGTIGE LINJE */
+    left: 80px;
+    right: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* SIDE-TAL (venstre) */
+  .page-header__number {
+    font-family: var(--ff-headlines);
+    font-size: var(--fs-l);
+    color: var(--primaer-clr);
+    line-height: 1.2;
+  }
+
+  /* TITEL (højre) */
+  .page-header__title {
+    font-family: var(--ff-headlines);
+    color: var(--primaer-clr);
+    font-size: var(--fs-l);
+    margin: 0;
+    line-height: 1.2;
+
+    text-align: right;       /* ← venstrestillet */
+    white-space: pre-line;  /* ← gør \n til linjeskift */
+  }
+
+  /* ---------- MOBILE VERSION ---------- */
+  @media (max-width: 800px) {
+    .page-header {
+      height: 233px;
+    }
+
+    .page-header__inner {
+      left: 24px;
+      right: 24px;
+      bottom: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+    }
+
+    .page-header__number {
+      font-size: var(--mfs-l);
+    }
+
+    .page-header__title {
+      font-size: var(--mfs-l);
+    }
+  }
+</style>
+
+<section class="page-header">
+  <div class="page-header__inner">
+    <span class="page-header__number">{pageNumber}</span>
+    <h1 class="page-header__title">{heading}</h1>
+  </div>
+</section>

@@ -54,6 +54,9 @@ html {
   --lh-body: 1.5625; /* 25px på 16px base */
   /* SPACE MELLEM SEKTIONER  */
   --space-section: 3rem;
+
+  /* NY: skal matche PageContainer side-padding */
+  --page-pad: 80px;
 }
 
 .section {
@@ -136,6 +139,7 @@ aside nav a.active {
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
 }
 
 .two-columns p {
@@ -146,19 +150,48 @@ aside nav a.active {
   text-align: justify;
 }
 
+/* PINK BAGGRUNDSBOKS*/
 .pink_box {
   background-color: var(--box-lilla-clr);
+
+  /* helt op til intro */
+  margin-top: 0;
+
+  /* divider-linje over boksen */
+  border-top: 1px solid rgba(25, 41, 82, 0.35);
+
+  /* overrul PageContainer side-padding */
+  margin-left: calc(var(--page-pad) * -1);
+  margin-right: calc(var(--page-pad) * -1);
+
+  /* behold indholdet alignet med resten af siden */
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+
+  /* spacing som i prototype */
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* Du har global h2 { margin-top: 96px; } — fjern kun inde i den pink boks */
+.pink_box h2 {
   margin-top: 0;
 }
+
 .pink_box p {
   font-size: var(--fs-s);
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
+  max-width: 400px;
 }
 
-/* Titel + tekst skal stå i to kolonner */
+/* Ekstra luft mellem kolonner i pink boks (kun spacing) */
+.pink_box .two-columns p {
+  max-width: 400px;
+}
 
+/* TITEL + TEKST SKAL STÅ I TO KOLONNERT*/
 .grid-header {
   display: grid;
   grid-template-columns: auto minmax(260px, 420px); /* H2 venstre – tekst højre */
