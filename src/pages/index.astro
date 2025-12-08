@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PageHeaderIndex from "../components/PageHeaderIndex.astro";
+import PageHeader from "../components/PageHeader.astro";
 import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
@@ -10,40 +10,27 @@ const currentPage = "index";
 
 
 <Layout {title} {currentPage}>
- <PageHeaderIndex pageNumber="01" heading="Brand\nGuidelines" />
+ <PageHeader pageNumber="01" heading="Brand\nGuidelines" />
     <PageContainer>
    <SectionIntro
-    text="Welcome to the official MRC guidelines for running your chapter. It’s designed to help new chapters get started and to support existing chapters in organizing effectively.."
+    text="Welcome to the official MRC Welcome to the official MRC guidelines for running your chapter. It’s designed to help new chapters get started and to support existing chapters in organizing effectively. for running your chapter. It’s designed to help new chapters get started and to support existing chapters in organizing effectively."
   />
-
-
-
-
-  <div class="text-row space-48">
+<div class="spacing">
+  <div class="grid-header">
   <h2>our vision</h2>
   <p> To inspire a global community of runners united by a passion for great beer, authentic camaraderie, and shared adventure — creating a world where everyone feels welcome to move, explore, and celebrate together.
   </p>
+
+  <h2 class="our-mission">our mission</h2>
+  <p class="our-mission"> Mikkeller Running Club brings people together through social running and the joy of great beer. We create inclusive spaces — in more than 100 chapters worldwide where anyone, regardless of experience or pace, can show up, run, and connect. 
+<br> <br>Through our events, tours, and everyday meetups, we balance an active lifestyle with the simple pleasure of sharing a post-run beer, building a vibrant international community driven by curiosity, friendship, and adventure.  </p>
 </div>
-
-  
-<div class="text-row space-48">
-  <h2>our mission</h2>
-  <p> Mikkeller Running Club brings people together through social running and the joy of great beer. We create inclusive spaces — in more than 100 chapters worldwide where anyone, regardless of experience or pace, can show up, run, and connect. 
-<br> <br>Through our events, tours, and everyday meetups, we balance an active lifestyle with the simple pleasure of sharing a post-run beer, building a vibrant international community driven by curiosity, friendship, and adventure. 
-  </p>
 </div>
-
-
-
-
-
-<section class="space-96">
 <h2>brand pillars</h2>
-</div>
 <div>
-    <p class="bold-text">Community & Camaraderie </p> <p> We are a welcoming, international family of runners. Our chapters foster genuine connections, open arms, and shared moments — on the run and over a beer. <br>
+    <p class="bold-text">Community & Camaraderie </p> <p> We are a welcoming, international family of runners. Our chapters foster genuine connections, open arms, and shared moments — on the run and over a beer.  <br>
 <br> <p class="bold-text">Inclusivity & Accessibility </p> <p> Everyone is invited. Whether you’re new or experienced, fast or slow, beer-lover or alcohol-free, MRC is a space where you can come as you are and feel part of the pack.  <br>
-<br></p> <p class="bold-text">Adventure & Exploration </p>  <p> We encourage curiosity. From local routes to global tours and beer festivals, we invite members to explore new places, push their boundaries, and embrace a spirit of discovery.  <br> </p>
+<br></p> <p class="bold-text">Adventure & Exploration </p>  <p> We encourage curiosity. From local routes to global tours and beer festivals, we invite members to explore new places, push their boundaries, and embrace a spirit of discovery.  <br>
 <br> <p class="bold-text">Balance & Enjoyment </p> <p>Running should be fun. We celebrate the harmony between staying active and enjoying great beer — promoting a lifestyle rooted in health, joy, and balance rather than competition.    </p>
 
 <section class="simple-stats">
@@ -74,11 +61,43 @@ const currentPage = "index";
 </Layout>
 
   
+
 <style>
   .our-mission {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+ 
+
+.stats-title {
+  font-size: var(--fs-m);
+  margin-bottom: var(--space-heading-body); 
+}
+
+
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem; 
+  padding-top: 3rem;
+ 
+}
+
+.stat-label {
+  font-size: 25px;
+  margin: 0 0 1rem 0;
+  line-height: 30px;
+  text-align: justify;
+  padding-bottom: 36px;
+}
+
+.stat-number {
+  font-family: var(--ff-headlines);
+font-size: var(--fs-l);
+  margin: 0;
+  padding-bottom: 24px;
+}
 
 
 </style>
