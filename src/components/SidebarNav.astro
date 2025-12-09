@@ -3,12 +3,12 @@ const { currentPage = "" } = Astro.props;
 ---
 
 <aside
+  class="sidebar-nav"
   style="
     width: 240px;
     min-width: 200px;
     background: #FFF;
     border-right: 1px solid var(--primaer-clr);
-   
     padding-right: 0%;
     position: sticky;
     top: 0;
@@ -16,23 +16,14 @@ const { currentPage = "" } = Astro.props;
     font-family: var(--ff-main);
     display: flex;
     flex-direction: column;
-  
   "
 >
-
-
-
-
-
-
   <!-- LOGO ØVERST -->
   <div style="text-align: center; margin-bottom: 0rem;">
-    
     <img
       src='/img/logo.svg'
       alt='Mikkeller Running Club logo'
       style='width: 65px; height: auto; margin-top: 1rem'
-      
     />
 
     <!-- DIVIDER UNDER LOGO -->
@@ -56,8 +47,7 @@ const { currentPage = "" } = Astro.props;
       gap: 1.4rem;
       font-family: var(--ff-main);
       font-size: 0.8rem;
-      padding-left: 0.25rem;
-       padding: 2rem 2rem;
+      padding: 2rem 2rem;
     "
   >
     <a href="/" class={currentPage === "index" ? "active" : ""}>01 Brand Guidelines</a>
@@ -82,11 +72,17 @@ const { currentPage = "" } = Astro.props;
       color: var(--text-clr);
       opacity: 0.8;
       text-align: center;
-       margin-bottom: 3rem;
-
+      margin-bottom: 3rem;
     "
   >
     UPDATED DECEMBER 01, 2025
   </p>
-
 </aside>
+
+<style>
+  @media (max-width: 800px) {
+    .sidebar-nav {
+      display: none !important; /* ← Fjerner navigationen på mobil */
+    }
+  }
+</style>
