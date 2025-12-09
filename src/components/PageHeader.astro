@@ -12,18 +12,16 @@ const {
     height: 380px;
     width: 100%;
     background-color: var(--primaer-clr);
-
-    position: relative; /* vigtig */
+    position: relative;
     overflow: hidden;
   }
 
   /* CONTENT – bund-placering */
   .page-header__inner {
     position: absolute;
-    bottom: 48px; /* ← DEN VIGTIGE LINJE */
+    bottom: 48px;
     left: 100px;
     right: 100px;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -44,9 +42,85 @@ const {
     font-size: var(--fs-l);
     margin: 0;
     line-height: 1.2;
+    text-align: right;
+    white-space: pre-line;
+  }
 
-    text-align: right;       /* ← venstrestillet */
-    white-space: pre-line;  /* ← gør \n til linjeskift */
+  /* ---------- BURGER + MOBILE NAV ---------- */
+
+  /* skjul checkbox */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* burger ikon */
+  .burger {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 28px;
+    height: 22px;
+    display: none; /* kun mobil */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  /* overlay-menu */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.25);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-family: var(--ff-main);
+    font-size: 0.9rem;
+    z-index: 1000;
+    transition: right 0.3s ease;
+  }
+
+  .mobile-nav a {
+    color: var(--text-clr);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* når checkbox er checked → slide nav ind */
+  .nav-toggle:checked ~ .mobile-nav {
+    right: 0;
+  }
+
+  /* baggrund overlay (klik-område) */
+  .nav-overlay-bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+  }
+
+  .nav-toggle:checked ~ .nav-overlay-bg {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   /* ---------- MOBILE VERSION ---------- */
@@ -70,11 +144,50 @@ const {
 
     .page-header__title {
       font-size: var(--mfs-l);
+      text-align: left;
+    }
+
+    .burger {
+      display: flex;
+    }
+
+    .mobile-nav {
+      display: flex;
     }
   }
 </style>
 
 <section class="page-header">
+  <!-- checkbox til toggle -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <!-- burger ikon -->
+  <label for="nav-toggle" class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <!-- mørk overlay-baggrund -->
+  <label for="nav-toggle" class="nav-overlay-bg"></label>
+
+  <!-- mobile nav overlay -->
+  <nav class="mobile-nav">
+    <a href="/">01 Brand Guidelines</a>
+    <a href="/brand-story">02 Brand story</a>
+    <a href="/become-captain">03 Become a captain</a>
+    <a href="/logo">04 Logo</a>
+    <a href="/graphics">05 Graphics</a>
+    <a href="/typography">06 Typography</a>
+    <a href="/colours">07 Colours</a>
+    <a href="/social-media">08 Social media</a>
+    <a href="/merch">09 Merch</a>
+    <a href="/photography">10 Photography</a>
+    <a href="/events">11 Events</a>
+    <a href="/communication">12 Communication</a>
+  </nav>
+
+  <!-- eksisterende header-indhold -->
   <div class="page-header__inner">
     <span class="page-header__number">{pageNumber}</span>
     <h1 class="page-header__title">{heading}</h1>
