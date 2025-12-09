@@ -16,7 +16,8 @@ const currentPage = "photography";
   />
 
 <h2>Guidelines</h2>
-    <ol class="two-columns">
+    <ol class="two-columns section">
+  <div>
   <li>
     Make sure everyone fits in the frame. Half-cropped group shots and selfies don’t look good 
     when shared. Take a step back and make sure the whole group is included.
@@ -31,7 +32,9 @@ const currentPage = "photography";
     Aim for quality over quantity. We don’t want to post something just for the sake of it – 
     our goal is for every chapter’s feed to look attractive and consistent.
   </li>
+</div>
 
+<div>
   <li>
     Check photo resolution and size. If collecting photos from different people, make sure they 
     are high resolution. Avoid mixing photos from many different devices with very different 
@@ -49,9 +52,108 @@ const currentPage = "photography";
     make sure they’re captured from good angles and with a bit of care – these moments are just 
     as important as the running shots.
   </li>
+  </div>
 </ol>
+
+<section class="section">
+<h2>Instagram settings for <br>better quality</h2>
+<div class="two-columns ">
+<p>To ensure your photos upload in the highest possible quality, go to:  <span class="bold-text"> Settings → Account → Data usage and enable “Upload at highest quality.”</span>  <br> <br>
+This ensures Instagram doesn’t compress your images too much, even when you're on mobile data.</p>
+</div>
+</section>
+
+
+<section class="section space-96">
+  <div class="pink_box">
+  <h2>EXAMPLES OF GREAT GROUP PHOTOS</h2>
+  <div class="two-columns">
+    <div>
+<li>Everyone is visible in the frame — no one is cropped out  </li> 
+  <li>Consistent lighting — avoid dark or overly harsh conditions</li>
+<li> High image quality with proper focus  </li> 
+  <li>Capture both running and post-run moments — show the full experience </li>
+<li> Recognizable MRC identity, such as Mikkeller Running Club apparel, the bar, flags, or other official visual elements</li>
+</div>
+
+<img src="/img/group-imgs.png" alt="group photos" class="pictures-group" />
+
+</div>
+  </div>
+
+
+  <div class="pink_box">
+  <h2>EXAMPLES OF NOT GREAT <br>GROUP PHOTOS</h2>
+  <div class="two-columns">
+    <div>
+<li> Images taken from awkward angles, resulting in an unprofessional appearance </li> 
+  <li>Partial group shots where several people are cut off or missing </li>
+<li> Blurry, unfocused, or low-quality photos  </li> 
+  <li>Capture both running and post-run moments — show the full experience </li>
+<li> AI-generated images that do not accurately represent or reflect the identity of Mikkeller Running Club or any of its chapters</li>
+</div>
+
+<img src="/img/group-imgs-1.png" alt="bad group photos" class="pictures-group" />
+
+
+</div>
+  </div>
+
+</section>
 
 
 
 </PageContainer>
 </Layout>
+
+<style>
+
+  .two-columns li::marker {
+  color: var(--primaer-clr);
+font-weight: bold;
+  font-size: 16px;
+}
+
+li {
+  font-size: var(--fs-s);
+  margin: 0 0 1rem 0;
+  text-align: justify;
+
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;   /* mere luft vandret */
+  row-gap: 40px;      /* mere luft lodret mellem rækkerne */
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-main);
+  font-size: 16px;
+  line-height: 1.8;   /* større linjehøjde = mere luft i tekstblokke */
+}
+
+
+ol {
+  padding-left: 20px; /* justering af indrykning */
+}
+
+
+.pictures-group {
+  max-width: 100%;
+  margin: 0;
+  display: block;
+}
+
+/* Mobil: én kolonne men stadig luft */
+@media (max-width: 700px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}
+
+
+
+</style>
