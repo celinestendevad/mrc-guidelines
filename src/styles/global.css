@@ -102,7 +102,7 @@ h3 {
 p {
   font-size: var(--fs-xs);
   margin: 0 0 1rem 0;
-  line-height: 30px;
+  line-height: var(--lh-body);
   text-align: justify;
 }
 
@@ -202,31 +202,7 @@ aside nav a.active {
 
 .text-row p {
   margin: 0;
-  font-size: var(--fs-xs);
-  line-height: 30px;
   max-width: 700px;
-  line-height: 1.6;
-}
-
-/* Tablet breakpoint: kolonner får mere luft */
-@media (max-width: 1100px) {
-  .text-row {
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 2.5rem;
-  }
-}
-
-/* Lille tablet / mobil: skift til én kolonne */
-@media (max-width: 750px) {
-  .text-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin: 4rem 0;
-  }
-
-  .text-row h2 {
-    white-space: normal; /* må gerne bryde på mobil */
-  }
 }
 
 /* GRID TIL 3 BILLEDER*/
@@ -356,4 +332,92 @@ aside nav a.active {
 /* Hvis du vil ekstra stor spacing på enkelte sektioner */
 .section.space-96 {
   margin-bottom: 96px;
+}
+
+/* --------------------------
+   RESPONSIVE STYLES
+--------------------------- */
+
+/* Tablet breakpoint: kolonner får mere luft */
+@media (max-width: 950px) {
+  .text-row {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2.5rem;
+  }
+}
+
+/* MOBIL: skift til én kolonne */
+@media (max-width: 800px) {
+  .text-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 4rem 0;
+    justify-content: center;
+  }
+  .text-row h2 {
+    white-space: normal; /* må gerne bryde på mobil */
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 4rem 0;
+    justify-content: center;
+  }
+
+  .grid-header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 4rem 0;
+    justify-content: center;
+  }
+  .grid_1_1_1 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 4rem 0;
+    justify-content: center;
+  }
+
+  .grid_1_1_1 img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    /* Centrerer hele gridet */
+    .two-columns,
+    .text-row,
+    .grid-header,
+    .grid_1_1_1 {
+      place-items: center;
+      text-align: center;
+    }
+
+    /* Centrerer tekstblokke */
+    .two-columns p,
+    .text-row p,
+    .grid-header p,
+    .pink_box p,
+    .grey_box p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Overskrifter midtstillet */
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    /* Billeder centreret */
+    .grid_1_1_1 img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
