@@ -1,14 +1,10 @@
----
-/* Global footer component */
----
-
 <footer
   class="mrc-footer"
   style="
     width: 100%;
-    max-width: 2500px;          /* matcher Figma-bredden */
-    height: 278px;              /* matcher Figma-højden */
-    background: #214082;        /* MRC blå */
+    max-width: 2500px;
+    height: 278px;
+    background: #214082;
     color: #ffffff;
     box-sizing: border-box;
     margin-top: 4rem;
@@ -16,20 +12,21 @@
     padding: 2.5rem 3rem;
     font-family: var(--ff-main);
     display: flex;
-    align-items: flex-end;      /* alt ned i bunden af boksen */
+    align-items: flex-end;
   "
 >
   <div
+    class="footer-inner"
     style="
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: space-between; /* venstre / midt / højre */
+      justify-content: space-between;
       align-items: flex-end;
       gap: 2rem;
     "
   >
-    <!-- VENSTRE: MIKKELLER -->
+    <!-- VENSTRE -->
     <div
       style="
         display: flex;
@@ -56,7 +53,7 @@
       </p>
     </div>
 
-    <!-- MIDTEN: DOWNLOAD-TEKST + KNAPPER -->
+    <!-- MIDTEN -->
     <div
       style="
         display: flex;
@@ -99,7 +96,7 @@
       </div>
     </div>
 
-    <!-- HØJRE: SEND REQUEST + SOCIAL IKONER -->
+    <!-- HØJRE -->
     <div
       style="
         display: flex;
@@ -109,7 +106,6 @@
         text-align: right;
       "
     >
-      <!-- SEND REQUEST knap som mail-link -->
       <a
         href="mailto:mrc@mikkeller.com"
         style="
@@ -137,7 +133,6 @@
         />
       </a>
 
-      <!-- Sociale ikoner -->
       <div
         style="
           display: flex;
@@ -163,3 +158,27 @@
     </div>
   </div>
 </footer>
+
+<!-- 📱 MOBILE GRID -->
+<style>
+  @media (max-width: 800px) {
+    footer.mrc-footer {
+      height: auto !important;            /* Footer bliver fleksibel */
+      padding: 2rem 1.5rem !important;
+    }
+
+    .footer-inner {
+      display: grid !important;           /* Skift fra flex → grid */
+      grid-template-columns: 1fr !important;
+      justify-items: center;
+      text-align: center;
+      gap: 2.5rem;
+    }
+
+    /* Højre kolonne skal centreres på mobil */
+    .footer-inner > div:last-child {
+      align-items: center !important;
+      text-align: center !important;
+    }
+  }
+</style>
