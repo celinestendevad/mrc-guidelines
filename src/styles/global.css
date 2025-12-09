@@ -34,7 +34,8 @@ html {
   --fs-body: 16px;
   --fs-l: 6rem; /* Headline 1 - desktop */
   --fs-m: 1.95rem; /* Headline 2 - desktop */
-  --fs-s: 1rem; /* Body text - desktop */
+  --fs-s: 1.5rem; /* Headline 3 - desktop */
+  --fs-xs: 1rem; /* Body text - desktop */
 
   /* FONT SIZES - MOBIL STØRRELSER */
   --mfs-l: 1.2rem; /* Headline 1 - mobil */
@@ -78,8 +79,7 @@ body {
 
 /* Overskrifter */
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--ff-headlines);
   color: var(--text-clr);
   margin-top: 96px;
@@ -92,8 +92,15 @@ h2 {
   font-size: var(--fs-m);
   margin-bottom: var(--space-heading-body); /* 24px til næste element */
 }
-p {
+
+h3 {
+  font-family: var(--ff-headlines);
+  color: var(--text-clr);
   font-size: var(--fs-s);
+  margin-bottom: var(--space-heading-body); /* 24px til næste element */
+}
+p {
+  font-size: var(--fs-xs);
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
@@ -136,7 +143,7 @@ aside nav a.active {
 }
 
 /* --------------------------
-   LAYOUT
+   LAYOUT & GRID STYLES
 --------------------------- */
 
 /* 2 KOLONNE GRID */
@@ -148,7 +155,7 @@ aside nav a.active {
 
 .two-columns p {
   max-width: 500px;
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
@@ -171,7 +178,7 @@ aside nav a.active {
 
 .grid-header p {
   max-width: 400px;
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
@@ -195,9 +202,9 @@ aside nav a.active {
 
 .text-row p {
   margin: 0;
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   line-height: 30px;
-  max-width: 600px;
+  max-width: 700px;
   line-height: 1.6;
 }
 
@@ -220,6 +227,21 @@ aside nav a.active {
   .text-row h2 {
     white-space: normal; /* må gerne bryde på mobil */
   }
+}
+
+/* GRID TIL 3 BILLEDER*/
+.grid_1_1_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.grid_1_1_1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 2rem;
 }
 
 /* --------------------------
@@ -256,7 +278,7 @@ aside nav a.active {
 }
 
 .pink_box p {
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
@@ -307,7 +329,7 @@ aside nav a.active {
 }
 
 .grey_box p {
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   margin: 0 0 1rem 0;
   line-height: 30px;
   text-align: justify;
