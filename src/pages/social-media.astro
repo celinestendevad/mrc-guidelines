@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
+import Button from "../components/Button.astro";
+
 
 const title = "Social Media";
 const currentPage = "social-media";
@@ -15,7 +17,7 @@ const currentPage = "social-media";
     text="Social media helps us share the spirit of MRC with the world. To keep our community consistent and recognisable, please follow these simple guidelines when you post."
   />
 <h2>Guidelines</h2>
- <div class="two-columns">
+ <div class="two-columns section ">
     <p>
       To increase our overall presence and engagement, we encourage everyone to be active on social media. Please create the following profiles and share the links with us: <br>
        <span class="bold-text">Facebook</span> <br>
@@ -50,25 +52,62 @@ Make sure your weekly practice details are clearly displayed, including: <br>
 
 
   <div class="grey_box">
-  <h2>MRC app</h2>
+  <h2>templates</h2>
   <div class="two-columns">
+    <div>
     <p>
-     The Mikkeller Running Club app is the digital home for our global community. It’s where runners, captains, and chapters stay connected – across cities, countries, and time zones. The purpose of the app is simple: to make it easy to find your local runs, discover other chapters when you travel, and keep MRC traditions alive everywhere. <br><br>Through the MRC app, you can explore chapters all around the world and discover where you can join runs across the globe. The app also keeps you updated on upcoming runs and events — from First Saturdays to weekly trainings and special occasions. <br><br>Your digital membership card is always at hand, giving you access to MRC benefits such as discounts at Mikkeller bars. Beyond the practical features, the app is also a source of inspiration, where you can see photos, news, and updates from other chapters and get a real sense of the global MRC spirit.
-    </p>
+    We encourage you to be creative, but we also want to help you show the best of the best from your runs. That is why we created templates and gathered them for your and some of our favorites in this guide. <br><br>
+    To ensure a consistent and professional visual identity across all teams and communication channels, please make use of our official Figma Guide. <br><br>
+
+    <span class="bold-text">The guide includes</span> <br>  
     
-    <p>
-   Captains have the responsibility to keep all chapter information updated and accurate in the app. Keeping your chapter information fresh ensures that both local members and visiting runners feel welcome and informed. This includes things like training times and meeting points, photos and updates from recent runs, local events, and any news related to the chapter. It’s a space where members can stay informed, share experiences, and keep the community spirit alive. <br><br>All of this can be managed through the APP platform: <span class="bold-text">mikkeller.myloyal.com</span>  (If you can’t log in, please contact: appsupport@mikkeller.com)
-
+- Brand colors and typography <br>
+- Logos and graphic elements <br>
+- Templates for social media posts <br>
+- Layout guidelines for announcements and updates <br> <br>
+Make sure to review the Figma Guide before creating any visual materials, so all content aligns with our overall branding.
     </p>
+    </div>
+    
+    <div>
+  <img src="/img/templates.png" alt="MRC Logo Example" />
+   <Button href="/kontakt" label="download" />
+
+    </div>
   </div>
   </div>
 
 
 
+<div class="text-row">
+  <h2>Don’ts:</h2>
+  <p>
+   Do not alter, weaken, or reduce our brand’s colors, typography, or visual features. Always follow the original MRC style or your chapter’s approved style — and avoid any treatments that compromise the integrity or clarity of the identity.
+  </p>
+</div>
 
 
+<div class="grid_1_1_1 section">
+  <img src="/img/sm-1.png" alt="MRC Logo Example" />
+  <img src="/img/sm-2.png" alt="MRC Logo Example" />
+  <img src="/img/sm-3.png" alt="MRC Logo Example" />
+</div>
 
 
 
 </PageContainer>
 </Layout>
+
+<style>
+  .two-columns img {
+   width: 100%;
+  }
+
+ .two-columns div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrer horisontalt */
+}
+
+
+</style>

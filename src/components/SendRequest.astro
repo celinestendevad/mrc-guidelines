@@ -5,7 +5,6 @@
         Please reach out if you have any ideas you’d like to share
       </h3>
 
-      <!-- ⭐ KNAP ER NU ET A-TAG -->
       <a href="mailto:mrc@mikkeller.com" class="sendrequest-button">
         <span>SEND REQUEST</span>
         <img src="/img/mail.svg" alt="" class="sendrequest-icon" />
@@ -21,22 +20,21 @@
 </section>
 
 <style>
-/* --------------------------
-   SEND REQUEST STRIP – DESKTOP
---------------------------- */
-
 .sendrequest-strip {
   background-color: var(--box-grey-clr);
   height: 200px;
 
   margin-left: calc(var(--page-pad) * -1);
+  margin-right: calc(var(--page-pad) * -1);
+
+  margin-left: -100px;
+  margin-right: -100px;
+
   padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
 
   padding-top: 72px;
-  position: relative; /* Desktop figur i bunden */
-
-
-   
+  position: relative;
 }
 
 .sendrequest-inner {
@@ -46,7 +44,6 @@
   gap: 2rem;
 }
 
-/* tekst venstrejusteret */
 .sendrequest-content {
   flex: 1;
   display: flex;
@@ -54,20 +51,6 @@
   align-items: flex-start;
 }
 
-.sendrequest-heading {
-  color: #192952;
-  font-family: Cubano, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0 0 25px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-align: left;
-}
-
-/* --------------------------
-   KNAP – STYLET A-TAG
---------------------------- */
 .sendrequest-button {
   display: inline-flex;
   align-items: center;
@@ -111,7 +94,6 @@
   width: auto;
 }
 
-/* figur i højre bund på desktop */
 .sendrequest-graphic {
   position: absolute;
   right: 40px;
@@ -120,9 +102,6 @@
   width: auto;
 }
 
-/* --------------------------
-   MOBIL VERSION – ALT UNDER HINANDEN
---------------------------- */
 @media (max-width: 768px) {
   .sendrequest-strip {
     margin-left: 0;
@@ -161,4 +140,3 @@
   }
 }
 </style>
-
