@@ -67,7 +67,7 @@ class="rotating logo-image" />
 <div>
     <h2 class="space">Examples from other chapters</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 3rem;">
+<div class="logo-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 3rem;">
       <img src="/img/logo-karlskrona.png" alt="Karlskrona MRC Logo" style="width: 100%; height: auto;" />
       <img src="/img/logo-london.png" alt="London MRC Logo" style="width: 100%; height: auto;" />
       <img src="/img/logo-malmo.png" alt="Malmö MRC Logo" style="width: 100%; height: auto;" />
@@ -96,6 +96,28 @@ class="rotating logo-image" />
   .space {
     margin-top: 4rem;
   }
+
+/*
+.logo-grid img {
+  transition: transform 0.3s ease;
+}
+
+.logo-grid img:hover {
+  transform: scale(1.07) rotate(-2deg);
+}
+*/
+
+
+.logo-grid img {
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-grid img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
 
 @keyframes spin {
   from {

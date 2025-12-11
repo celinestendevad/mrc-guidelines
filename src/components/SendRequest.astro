@@ -19,22 +19,17 @@
   </div>
 </section>
 
-<style>
-.sendrequest-strip {
+<style>.sendrequest-strip {
   background-color: var(--box-grey-clr);
-  height: 200px;
 
   margin-left: calc(var(--page-pad) * -1);
   margin-right: calc(var(--page-pad) * -1);
 
-  margin-left: -100px;
-margin-left: -100px;
-
-  padding-left: var(--page-pad);
-  padding-right: var(--page-pad);
-
-  padding-top: 72px;
+  padding: 72px var(--page-pad) 40px;
+  min-height: 200px;
   position: relative;
+
+  margin-bottom: -70px;
 }
 
 .sendrequest-inner {
@@ -54,79 +49,56 @@ margin-left: -100px;
 .sendrequest-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-
   gap: 10px;
-  padding: 10px 39px;
-  height: 30px;
+
+  padding: 12px 32px;
+  border-radius: 8px;
 
   font-family: "Cubano", sans-serif;
   font-size: 16px;
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 
   background: #214082;
   color: white;
   text-decoration: none;
-
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
 }
 
 .sendrequest-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-}
-
-.sendrequest-button:active {
-  transform: translateY(0);
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-.sendrequest-icon {
-  height: 16px;
-  width: auto;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
 }
 
 .sendrequest-graphic {
   position: absolute;
   right: 40px;
-  bottom: 0;
+  bottom: -8px;
   height: 150px;
-  width: auto;
+  animation: floaty 2s ease-in-out infinite;
 }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
 
 @media (max-width: 768px) {
   .sendrequest-strip {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-    height: auto;
-    position: static;
+    margin: 0 -0;
+    padding: 40px 20px;
+    min-height: auto;
   }
 
   .sendrequest-inner {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
+    text-align: center;
   }
 
   .sendrequest-content {
     align-items: center;
-    text-align: center;
-  }
-
-  .sendrequest-heading {
-    text-align: center;
-    margin-bottom: 20px;
   }
 
   .sendrequest-button {
@@ -135,8 +107,8 @@ margin-left: -100px;
 
   .sendrequest-graphic {
     position: static;
-    height: 130px;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    height: 120px;
   }
 }
 </style>

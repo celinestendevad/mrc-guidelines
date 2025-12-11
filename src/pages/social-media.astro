@@ -88,10 +88,11 @@ Make sure to review the Figma Guide before creating any visual materials, so all
 
 
 <div class="grid_1_1_1 section">
-  <img src="/img/sm-1.png" alt="MRC Logo Example" />
-  <img src="/img/sm-2.png" alt="MRC Logo Example" />
-  <img src="/img/sm-3.png" alt="MRC Logo Example" />
+  <div class="sm-image"><img src="/img/sm-1.png" alt="" /></div>
+  <div class="sm-image"><img src="/img/sm-2.png" alt="" /></div>
+  <div class="sm-image"><img src="/img/sm-3.png" alt="" /></div>
 </div>
+
 
 
 
@@ -108,6 +109,76 @@ Make sure to review the Figma Guide before creating any visual materials, so all
   flex-direction: column;
   align-items: center; /* centrer horisontalt */
 }
+/* WRAPPER */
+.sm-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  display: block;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Når de scroller ind */
+.sm-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* IMAGE EFFECT */
+.sm-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.sm-image:hover img {
+  transform: scale(1.04);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Underline i dine 3 farver */
+.sm-image::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #214082,
+    #d6b3d5,
+    #badeb9
+  );
+
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.sm-image:hover::after {
+  width: 100%;
+}
 
 
 </style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  });
+
+  document.querySelectorAll('.image-box, .sm-image')
+    .forEach(el => observer.observe(el));
+</script>
+ 
