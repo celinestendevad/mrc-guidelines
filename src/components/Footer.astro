@@ -1,184 +1,206 @@
-<footer
-  class="mrc-footer"
-  style="
-    width: 100%;
-    max-width: 2500px;
-    height: 278px;
-    background: #214082;
-    color: #ffffff;
-    box-sizing: border-box;
-    margin-top: 4rem;
-    margin-left: 0;
-    padding: 2.5rem 3rem;
-    font-family: var(--ff-main);
-    display: flex;
-    align-items: flex-end;
-  "
->
-  <div
-    class="footer-inner"
-    style="
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 2rem;
-    "
-  >
+<footer class="mrc-footer">
+  <div class="footer-inner">
+
     <!-- VENSTRE -->
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-      "
-    >
-      <p
-        style="
-          font-family: var(--ff-headlines);
-          font-size: 1.6rem;
-          margin: 0;
-        "
-      >
-        MIKKELLER
-      </p>
-      <p
-        style="
-          margin: 0;
-          font-size: 0.85rem;
-        "
-      >
-        © 2025
-      </p>
+    <div class="footer-left">
+      <p class="footer-logo">MIKKELLER</p>
+      <p class="footer-copy">© 2025</p>
     </div>
 
     <!-- MIDTEN -->
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0.75rem;
-      "
-    >
-      <p
-        style="
-          margin: 0;
-          font-size: 0.8rem;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          line-height: 1.4;
-          text-align: center;
-        "
-      >
+    <div class="footer-center">
+      <p class="footer-download-text">
         DOWNLOAD OUR APP<br />
         STAY CONNECTED WITH MRC
       </p>
 
-      <div
-        style="
-          display: flex;
-          gap: 0.75rem;
-        "
-      >
-        <img
-          src="/img/windows-download-button.svg"
-          alt="Download on Windows"
-          style="height: 40px; width: auto; display: block;"
-        />
-        <img
-          src="/img/store-downloade-button.svg"
-          alt="Download on App Stores"
-          style="height: 40px; width: auto; display: block;"
-        />
+      <div class="footer-downloads">
+        <a
+          href="https://apps.apple.com/dk/app/mikkeller-running-club/id6745568854"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/img/windows-download-button.svg"
+            alt="Download on Windows"
+          />
+        </a>
+
+        <a
+          href="https://apps.apple.com/dk/app/mikkeller-running-club/id6745568854"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/img/store-downloade-button.svg"
+            alt="Download on App Store"
+          />
+        </a>
       </div>
     </div>
 
     <!-- HØJRE -->
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem;
-        text-align: right;
-      "
-    >
+    <div class="footer-right">
       <a
         href="mailto:mrc@mikkeller.com"
-        style="
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0.6rem 1.6rem;
-          border: 1px solid #ffffff;
-          border-radius: 999px;
-          background: transparent;
-          color: #ffffff;
-          font-family: var(--ff-main);
-          font-size: 0.9rem;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          cursor: pointer;
-          text-decoration: none;
-        "
+        class="footer-button"
       >
         <span>SEND REQUEST</span>
-        <img
-          src="/img/mail.svg"
-          alt=""
-          style="height: 16px; width: auto;"
-        />
+        <img src="/img/mail.svg" alt="" />
       </a>
 
-      <div
-        style="
-          display: flex;
-          gap: 0.75rem;
-        "
-      >
-        <img
-          src="/img/insta.svg"
-          alt="Instagram"
-          style="height: 22px; width: auto; display: block;"
-        />
-        <img
-          src="/img/face.svg"
-          alt="Facebook"
-          style="height: 22px; width: auto; display: block;"
-        />
-        <img
-          src="/img/mail.svg"
-          alt="Email"
-          style="height: 22px; width: auto; display: block;"
-        />
+      <div class="footer-socials">
+        <a
+          href="https://www.instagram.com/mikkellerrunningclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/img/insta.svg" alt="Instagram" />
+        </a>
+
+        <a
+          href="https://www.facebook.com/mikkellerrunningclub/?locale=da_DK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/img/face.svg" alt="Facebook" />
+        </a>
+
+        <a href="mailto:mrc@mikkeller.com">
+          <img src="/img/mail.svg" alt="Email" />
+        </a>
       </div>
     </div>
+
   </div>
 </footer>
 
-<!-- 📱 MOBILE GRID -->
 <style>
-  @media (max-width: 800px) {
-    footer.mrc-footer {
-      height: auto !important;            /* Footer bliver fleksibel */
-      padding: 2rem 1.5rem !important;
-    }
+  .mrc-footer {
+    width: 100%;
+    max-width: 2500px;
+    background: #214082;
+    color: #ffffff;
+    margin-top: 4rem;
+    padding: 2.5rem 3rem;
+    font-family: var(--ff-main);
+    box-sizing: border-box;
+  }
 
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .footer-logo {
+    font-family: var(--ff-headlines);
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-download-text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .footer-downloads {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .footer-downloads img {
+    height: 40px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .footer-downloads a:hover img {
+    transform: translateY(-2px);
+    opacity: 0.85;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .footer-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.6rem;
+    border: 1px solid #ffffff;
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  .footer-button:hover {
+    background: #ffffff;
+    color: #214082;
+  }
+
+  .footer-button img {
+    height: 16px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .footer-socials img {
+    height: 22px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .footer-socials a:hover img {
+    transform: translateY(-2px);
+    opacity: 0.85;
+  }
+
+  /* 📱 MOBIL */
+  @media (max-width: 800px) {
     .footer-inner {
-      display: grid !important;           /* Skift fra flex → grid */
-      grid-template-columns: 1fr !important;
+      display: grid;
+      grid-template-columns: 1fr;
       justify-items: center;
       text-align: center;
       gap: 2.5rem;
     }
 
-    /* Højre kolonne skal centreres på mobil */
-    .footer-inner > div:last-child {
-      align-items: center !important;
-      text-align: center !important;
+    .footer-right {
+      align-items: center;
+      text-align: center;
     }
   }
 </style>
