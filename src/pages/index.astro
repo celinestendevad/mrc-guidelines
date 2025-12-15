@@ -73,6 +73,67 @@ const currentPage = "index";
   
 
 <style>
+
+
+
+
+.text-row h2 {
+  display: inline-block;
+  position: relative;
+}
+
+.text-row h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 4px;
+  border-radius: 2px;
+
+  background: linear-gradient(90deg, #214082, #428eef, #fff);
+  transition: width 0.4s ease;
+}
+
+.text-row:hover h2::after {
+  width: 100%;
+}
+
+ 
+.text-row {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.text-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-row {
+  border-left: 6px solid #214082;
+  padding-left: 1.5rem;
+}
+.text-row {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+
+.text-row:nth-child(1) { border-color: #192952; }
+.text-row:nth-child(2) { border-color: #214082; }
+.text-row:nth-child(3) { border-color: #245bd1; }
+.text-row:nth-child(4) { border-color: #234baa; }
+
+
+
+
+
+
   .our-mission {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -130,3 +191,12 @@ font-size: var(--fs-l);
 }
 
 </style>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  });
+
+  document.querySelectorAll(".text-row").forEach(el => observer.observe(el));
+</script>
