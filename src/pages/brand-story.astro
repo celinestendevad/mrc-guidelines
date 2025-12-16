@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Brand Story";
+const description =
+  "Discover the story behind Mikkeller Running Club — from its beginnings in Copenhagen to a global running community built on beer, camaraderie, and shared adventure.";
 const currentPage = "brand-story";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
 
   <PageHeader pageNumber="02" heading="Brand\nStory" />
     <PageContainer>

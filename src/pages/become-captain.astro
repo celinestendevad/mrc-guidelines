@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Become a Captain";
+const description =
+  "Learn what it means to be a Mikkeller Running Club captain. Discover responsibilities, communication tools, benefits, and how captains keep the MRC community alive.";
 const currentPage = "become-captain";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
    <PageHeader pageNumber="03" heading="Become\na captain" />
  <PageContainer>
    <SectionIntro

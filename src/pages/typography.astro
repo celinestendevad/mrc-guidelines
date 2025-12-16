@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Typography";
+const description =
+  "Typography guidelines for Mikkeller Running Club. Learn how Cubano and Sofia Pro create a consistent, recognisable, and professional brand voice.";
 const currentPage = "typography";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
     <PageHeader pageNumber="06" heading="Typography" />
     <PageContainer>
    <SectionIntro

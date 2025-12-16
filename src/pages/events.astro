@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Events";
+const description =
+  "Explore Mikkeller Running Club events — from weekly trainings and First Saturdays to international tours that connect the global MRC community.";
 const currentPage = "events";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
   <PageHeader pageNumber="11" heading="Events" />
    <PageContainer>
    <SectionIntro

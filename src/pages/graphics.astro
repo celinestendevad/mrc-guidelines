@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 import SendRequest from "../components/SendRequest.astro";
 const title = "Graphics";
+const description =
+  "Guidelines for using graphics in Mikkeller Running Club. Learn how approved visuals strengthen recognition, clarity, and community across all chapters.";
 const currentPage = "graphics";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
   <PageHeader pageNumber="05" heading="Graphics" />
   <PageContainer>
    <SectionIntro

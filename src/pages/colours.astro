@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Colours";
+const description =
+  "Explore the official Mikkeller Running Club colour palette. Learn how primary, secondary, and tertiary colours create a consistent and recognisable MRC identity.";
 const currentPage = "colours";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
    <PageHeader pageNumber="07" heading="colours" />
   <PageContainer>
    <SectionIntro

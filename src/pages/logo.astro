@@ -6,10 +6,12 @@ import PageContainer from "../components/PageContainer.astro";
 import Button from "../components/Button.astro";
 import SendRequest from "../components/SendRequest.astro";
 const title = "Logo";
+const description =
+  "Learn how to create and use the Mikkeller Running Club logo. Guidelines for chapter logos, approvals, and examples from MRC chapters worldwide.";
 const currentPage = "logo";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
     <PageHeader pageNumber="04" heading="Logo" />
      <PageContainer>
    <SectionIntro

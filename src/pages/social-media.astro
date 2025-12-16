@@ -7,10 +7,12 @@ import Button from "../components/Button.astro";
 
 
 const title = "Social Media";
+const description =
+  "Social media guidelines for Mikkeller Running Club. Learn how to communicate consistently, responsibly, and creatively across all MRC chapters.";
 const currentPage = "social-media";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
   <PageHeader pageNumber="08" heading="Social\nMedia" />
    <PageContainer>
    <SectionIntro

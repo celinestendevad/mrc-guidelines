@@ -5,11 +5,13 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Brand Guidelines";
+const description =
+  "Official Mikkeller Running Club brand guidelines. Learn how to use logo, colours, typography, graphics, and communication consistently across all chapters.";
 const currentPage = "index";
 ---
 
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
  <PageHeaderIndex pageNumber="01" heading="Brand\nGuidelines" />
     <PageContainer>
    <SectionIntro

@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Merch";
+const description =
+  "Merch guidelines for Mikkeller Running Club. Learn how official apparel and merchandise help maintain a consistent and recognisable global identity.";
 const currentPage = "merch";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
    <PageHeader pageNumber="09" heading="Merch" />
     <PageContainer>
    <SectionIntro

@@ -3,8 +3,13 @@ import "../styles/global.css";
 import SidebarNav from "../components/SidebarNav.astro";
 import Footer from "../components/Footer.astro";
 
-const { title = "MRC Brand Guidelines", currentPage = "" } = Astro.props;
+const {
+  title = "MRC Brand Guidelines",
+  description = "Official brand guidelines for Mikkeller Running Club. Learn how to use logo, colours, typography, graphics and social media consistently across chapters worldwide.",
+  currentPage = "",
+} = Astro.props;
 ---
+
 
 <!doctype html>
 <html lang="en">

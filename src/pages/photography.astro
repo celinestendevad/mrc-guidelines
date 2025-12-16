@@ -5,10 +5,12 @@ import SectionIntro from "../components/SectionIntro.astro";
 import PageContainer from "../components/PageContainer.astro";
 
 const title = "Photography";
+const description =
+  "Photography guidelines for Mikkeller Running Club. Learn how to capture high-quality running and group photos that reflect the MRC spirit.";
 const currentPage = "photography";
 ---
 
-<Layout {title} {currentPage}>
+<Layout {title} {description} {currentPage}>
 <PageHeader pageNumber="10" heading="Photography" />
   <PageContainer>
    <SectionIntro
