@@ -38,7 +38,8 @@ html {
   --fs-xs: 1rem; /* Body text - desktop */
 
   /* FONT SIZES - MOBIL STØRRELSER */
-  --mfs-l: 1.2rem; /* Headline 1 - mobil */
+  --mfs-xl: 2.5rem; /* Headline 1 - mobil */
+  --mfs-l: 1.2rem; /* Headline 2 - mobil */
   --mfs-m: 1rem; /* Body text - mobil */
 
   /* FARVER */
@@ -117,7 +118,7 @@ p {
     font-size: var(--mfs-m);
   }
   h1 {
-    font-size: var(--mfs-l);
+    font-size: var(--mfs-xl);
   }
 }
 
