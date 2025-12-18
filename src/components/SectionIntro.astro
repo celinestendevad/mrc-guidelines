@@ -4,92 +4,87 @@ const { text = "", image = "" } = Astro.props;
 
 <style>
 .section-intro {
-  margin-top: 96px;
   position: relative;
-  overflow: visible; /* vigtigt */
+  margin-top: 96px;
 }
 
-  .section-intro__heading {
-    text-transform: uppercase;
-    margin: 0;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
-
-      max-width: 100%;
-
-  }
-
-  /* BILLEDE – ligger ovenpå */
-.section-intro__image {
-  position: absolute;
-  bottom: 0;
-  width: 160px;   
-  right: -100px;  
-  max-width: none;
-  margin-right: 1rem;
-  pointer-events: none;
+.section-intro__heading {
+  max-width: 900px;
+  text-transform: uppercase;
+  margin: 0;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards 0.2s;
+  animation: fadeInUp 1s ease forwards;
+  z-index: 1;
+  position: relative;
 }
 
-
- .section-intro__image img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* illustration */
+.section-intro__image {
+  position: absolute;
+  right: -80px;
+  bottom: -20px;
+  width: 160px;
+  z-index: 0;
+  pointer-events: none;
 }
 
-  /* STREGEN */
+/* line */
+.section-intro__line {
+  margin-top: 96px;
+  height: 1px;
+  width: 0;
+  background-color: var(--primaer-clr);
+  animation: drawLine 1s ease forwards 0.5s;
+}
+
+/* animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawLine {
+  to {
+    width: calc(100% + 200px);
+    margin-left: -100px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .section-intro__image {
+    width: 110px;
+    right: -20px;
+    bottom: -10px;
+    opacity: 0.6;
+  }
+
   .section-intro__line {
-    margin-top: 96px;
-    height: 1px;
-    width: 0;
-    margin-left: 0;
-    background-color: var(--primaer-clr);
-    animation: drawLine 1s ease forwards 0.5s;
+    animation: drawLineMobile 1s ease forwards 0.5s;
   }
+}
 
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes drawLineMobile {
+  to {
+    width: calc(100% + 80px);
+    margin-left: -40px;
   }
-
-  @keyframes drawLine {
-    to {
-      width: calc(100% + 200px);
-      margin-left: -100px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    .section-intro__image {
-   display: none;
-  }
-
-    @keyframes drawLineMobile {
-      to {
-        width: calc(100% + 80px);
-        margin-left: -40px;
-      }
-    }
-
-    .section-intro__line {
-      animation: drawLineMobile 1s ease forwards 0.5s;
-    }
-  }
+}
 </style>
 
 <section class="section-intro">
   <h2 class="section-intro__heading">{text}</h2>
 
   {image && (
-    <div class="section-intro__image">
-      <img src={image} alt="">
-    </div>
+    <img
+      src={image}
+      alt=""
+      class="section-intro__image"
+      aria-hidden="true"
+    />
   )}
 
   <div class="section-intro__line"></div>
