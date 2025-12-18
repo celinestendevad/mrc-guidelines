@@ -57,7 +57,7 @@ html {
   /* SPACE MELLEM SEKTIONER  */
   --space-section: 3rem;
 
-  /* NY: skal matche PageContainer side-padding */
+  /* Matche PageContainer side-padding */
   --page-pad: 100px;
 }
 
@@ -118,7 +118,7 @@ p {
     font-size: var(--mfs-m);
   }
   h1 {
-    font-size: var(--mfs-xl);
+    font-size: var(--mfs-l);
   }
 }
 
@@ -249,7 +249,7 @@ aside nav a.active {
   padding-bottom: 96px;
 }
 
-/* Du har global h2 { margin-top: 96px; } — fjern kun inde i den pink boks */
+/* { margin-top: 96px; } — i den pink boks */
 .pink_box h2 {
   margin-top: 0;
 }
@@ -300,7 +300,7 @@ aside nav a.active {
   padding-bottom: 96px;
 }
 
-/* Du har global h2 { margin-top: 96px; } — fjern kun inde i den pink boks */
+/* { margin-top: 96px; } — fjern kun inde i den grå boks */
 .grey_box h2 {
   margin-top: 0;
 }
